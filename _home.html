@@ -1,0 +1,33 @@
+<template name="Home">
+
+
+  <div class="wrapper">
+    <div class="left">
+      <a href="https://twitter.com/willschiller" class="header-link"><i class="flaticon-twitter1"></i></a>
+      <a href="https://github.com/aketekt/" class="header-link"><i class="flaticon-github10"></i></a>
+    </div>
+    <div class="right" style="display:block;">
+      <a href="/signup" class="header-link">Sign up</a>
+      <a href="/signin" class="header-link">Log in</a>
+    </div>
+  </div>
+
+  {{#if currentUser}}
+      {{> dashboard}}
+  {{else}}
+      {{> search}}
+  {{/if}}
+</template>
+
+<template name="search">
+  <div align="center">
+  <p>I want to share a house in</p>
+  <form  class="search">
+    <input type="text"/>
+    <input type="submit" value="Search">
+  </form>
+</div>
+<div align="center" style="margin:50px;">
+  <a href="#" class="header-link">I have a property to list</a>
+</div>
+</template>

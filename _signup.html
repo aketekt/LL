@@ -1,0 +1,23 @@
+<template name="signup">
+  <div class="wrapper">
+    <div class="left">
+      <a href="https://twitter.com/willschiller" class="header-link"><i class="flaticon-twitter1"></i></a>
+      <a href="https://github.com/aketekt/" class="header-link"><i class="flaticon-github10"></i></a>
+    </div>
+  </div>
+  {{#if currentUser}}
+         <p>You're logged in.</p>
+     {{else}}
+         {{> register}}
+     {{/if}}
+</template>
+  <template name="register">
+    <h1>sign up</h1>
+      <form>
+          <p>Email</p>
+          <input type="email" name="registerEmail">
+          <p>Password</p>
+          <input type="password" name="registerPassword">
+          <input type="submit" value="Register">
+    </form>
+  </template >
